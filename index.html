@@ -164,7 +164,7 @@
         const app = data.results[0];
         document.getElementById("hatimsIcon").src = app.artworkUrl100.replace("100x100bb", "200x200bb");
         document.getElementById("hatimsName").textContent = app.trackName;
-        document.getElementById("hatimsDesc").textContent = app.primaryGenreName + " • " + app.sellerName;
+        document.getElementById("hatimsDesc").textContent = app.primaryGenreName + " • " + app.sellerName + "\n Dinimizde okunan çeşitli hatimlerin adetleri ve hesaplamalarının yapıldığı uygulama.";
       });
 
     // İçinde Ne Var - App Store Lookup API
@@ -174,7 +174,7 @@
         const app = data.results[0];
         document.getElementById("icindenevarIcon").src = app.artworkUrl100.replace("100x100bb", "200x200bb");
         document.getElementById("icindenevarName").textContent = app.trackName;
-        document.getElementById("icindenevarDesc").textContent = app.primaryGenreName + " • " + app.sellerName;
+        document.getElementById("icindenevarDesc").textContent = app.primaryGenreName + " • " + app.sellerName + "\n Oluşturduğun listeleri QR ile takip edebildiğin uygulama.";
       });
   </script>
 
