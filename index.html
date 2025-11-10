@@ -3,204 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uygulamalar — Kemal Serkan Yıldırım</title>
-  <meta name="description" content="Kemal Serkan Yıldırım tarafından geliştirilen iOS uygulamaları.">
+  <title>Kemal Serkan YILDIRIM - Uygulamalar</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #fafafa;
-      color: #1f2937;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
       margin: 0;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      color: #212529;
     }
-
-    main {
-      background: white;
-      padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-      max-width: 520px;
-      width: 90%;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-      color: #0f172a;
+    header {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 20px;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
-
-    .app-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    header h1 {
+      font-size: 22px;
+      margin: 0;
+      letter-spacing: 0.5px;
     }
-
-    .app {
+    .logo {
+      font-weight: 600;
+      font-size: 16px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    .app-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
-      padding: 0.8rem 1rem;
-      border-radius: 10px;
-      background-color: #f9fafb;
-      border: 1px solid #e5e7eb;
-      transition: transform 0.1s ease, background 0.2s ease;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin: 20px auto;
+      padding: 18px;
+      width: 90%;
+      max-width: 720px;
+      transition: transform 0.2s ease;
     }
-
-    .app:hover {
-      background-color: #f1f5f9;
-      transform: translateY(-2px);
+    .app-container:hover {
+      transform: scale(1.01);
     }
-
-    .app-left {
+    .app-info {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      flex: 1;
+      gap: 15px;
     }
-
-    .app img {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
+    .app-info img {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
     }
-
-    .app-name {
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
-
-    .app-desc {
-      font-size: 0.85rem;
-      color: #6b7280;
-    }
-
     .app-buttons {
       display: flex;
-      gap: 0.5rem;
+      gap: 10px;
     }
-
     .btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.85;
+    }
+    .btn-detail {
+      background-color: #6c757d;
+      color: white;
+    }
+    .btn-store {
+      background-color: #0070c9;
+      color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 0.45rem 0.65rem;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s ease;
+      gap: 6px;
     }
-
-    .btn svg {
-      width: 20px;
-      height: 20px;
-      fill: white;
+    .btn-store img {
+      width: 18px;
+      height: 18px;
     }
-
-    .btn-detail {
-      background-color: #0ea5a4;
-    }
-
-    .btn-detail:hover {
-      background-color: #089191;
-    }
-
-    .btn-store {
-      background-color: #000;
-    }
-
-    .btn-store:hover {
-      background-color: #333;
-    }
-
     footer {
-      margin-top: 1.5rem;
-      font-size: 0.8rem;
-      color: #9ca3af;
       text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-top: 40px;
+      padding: 20px;
+      background: #f1f3f4;
+      border-top: 1px solid #ddd;
     }
-
-    @media (max-width: 480px) {
-      .app {
+    footer a {
+      color: #0070c9;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .app-container {
         flex-direction: column;
         align-items: flex-start;
       }
       .app-buttons {
-        align-self: flex-end;
+        margin-top: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Kemal Serkan Yıldırım — Uygulamalar</h1>
 
-    <div class="app-list">
+  <header>
+    <h1>Kemal Serkan YILDIRIM</h1>
+    <div class="logo">Uygulamalar</div>
+  </header>
 
-      <!-- Hatim -->
-      <div class="app">
-        <div class="app-left">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/10/b0/dc/10b0dc36-530e-4a71-8702-2925c5b04b63/AppIcon-0-1x_U007emarketing-0-10-0-85-220.png/1200x630bb.png" alt="Hatim Uygulaması">
-          <div>
-            <div class="app-name">Hatim</div>
-            <div class="app-desc">Kuran-ı Kerim Hatim Takip Uygulaması</div>
-          </div>
-        </div>
-        <div class="app-buttons">
-          <!-- Detay Butonu -->
-          <a class="btn btn-detail" href="hatims.html" title="Detay">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7.633 0-11 7-11 7s3.367 7 11 7 11-7 11-7-3.367-7-11-7zm0 12c-2.761 0-5-2.239-5-5s2.239-5 
-5-5 5 2.239 5 5-2.239 5-5 5z"/><circle cx="12" cy="12" r="2.5"/></svg>
-          </a>
-
-          <!-- Store Butonu -->
-          <a class="btn btn-store" href="https://apps.apple.com/tr/app/hatims/id428374149" target="_blank" title="App Store">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-37.2 16.2-65.5 49.4-86.4-18.6-26.6-46.5-41.3-82.9-44.2-34.8-2.7-72.3 20.3-85.4 20.3-13.6 0-48.6-19.4-75.3-19-38.7.6-71.6 22.4-91.1 
-56.7-38.7 67.1-9.9 166 27.9 220.2 18.4 26.8 40.2 56.8 68.9 55.7 27.7-1.1 38.2-17.9 71.6-17.9 33.1 0 42.5 17.9 71.7 17.3 29.7-.6 48.4-27.3 66.6-54.3 21-30.8 
-29.7-60.8 29.9-62.4-.6-.3-57.4-22-57.7-86.7zM260.7 99.3c14.8-17.9 24.8-42.8 22-67.3-21.3.8-47.1 14.3-62.3 32.2-13.7 15.9-25.6 41.4-22.4 65.6 
-24.2 1.9 48.9-12.3 62.7-30.5z"/></svg>
-          </a>
-        </div>
+  <div class="app-container">
+    <div class="app-info">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/73/1b/93/731b930d-b8b0-fc86-1db0-9a2e51e14f42/AppIcon-0-1x_U007emarketing-0-85-220-0-10.png/1200x630wa.png" alt="Hatims">
+      <div>
+        <h2>Hatims</h2>
+        <p>Dinimizde okunan çeşitli hatimlerin adetleri ve hesaplamalarının yapıldığı uygulama.</p>
       </div>
-
-      <!-- İçinde Ne Var -->
-      <div class="app">
-        <div class="app-left">
-          <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/16/0d/44/160d4478-d12c-7d08-48c8-cbba9bbaf997/AppIcon-0-1x_U007emarketing-0-10-0-85-220.png/1200x630bb.png" alt="İçinde Ne Var Uygulaması">
-          <div>
-            <div class="app-name">İçinde Ne Var</div>
-            <div class="app-desc">Ürün içeriklerini kolayca sorgula</div>
-          </div>
-        </div>
-        <div class="app-buttons">
-          <!-- Detay Butonu -->
-          <a class="btn btn-detail" href="icindenevar.html" title="Detay">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7.633 0-11 7-11 7s3.367 7 11 7 11-7 11-7-3.367-7-11-7zm0 12c-2.761 0-5-2.239-5-5s2.239-5 
-5-5 5 2.239 5 5-2.239 5-5 5z"/><circle cx="12" cy="12" r="2.5"/></svg>
-          </a>
-
-          <!-- Store Butonu -->
-          <a class="btn btn-store" href="https://apps.apple.com/tr/app/i-%C3%A7indenevar/id6753892789" target="_blank" title="App Store">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-37.2 16.2-65.5 49.4-86.4-18.6-26.6-46.5-41.3-82.9-44.2-34.8-2.7-72.3 20.3-85.4 
-20.3-13.6 0-48.6-19.4-75.3-19-38.7.6-71.6 22.4-91.1 56.7-38.7 67.1-9.9 166 27.9 220.2 18.4 26.8 40.2 56.8 68.9 55.7 
-27.7-1.1 38.2-17.9 71.6-17.9 33.1 0 42.5 17.9 71.7 17.3 29.7-.6 48.4-27.3 66.6-54.3 21-30.8 29.7-60.8 
-29.9-62.4-.6-.3-57.4-22-57.7-86.7zM260.7 99.3c14.8-17.9 
-24.8-42.8 22-67.3-21.3.8-47.1 14.3-62.3 32.2-13.7 15.9-25.6 41.4-22.4 65.6 
-24.2 1.9 48.9-12.3 62.7-30.5z"/></svg>
-          </a>
-        </div>
-      </div>
-
     </div>
+    <div class="app-buttons">
+      <button class="btn btn-detail" onclick="window.location.href='hatims.html'">🔍 Detay</button>
+      <button class="btn btn-store" onclick="window.open('https://apps.apple.com/tr/app/hatims/id428374149','_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="App Store"> Store
+      </button>
+    </div>
+  </div>
 
-    <footer>
-      © 2025 Kemal Serkan Yıldırım
-    </footer>
-  </main>
+  <div class="app-container">
+    <div class="app-info">
+      <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/63/1e/50/631e5045-2e93-90e2-3646-02eb0c5e5a0f/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/1200x630wa.png" alt="İçinde Ne Var">
+      <div>
+        <h2>İçinde Ne Var</h2>
+        <p>Oluşturduğun listeleri QR ile takip edebildiğin uygulama.</p>
+      </div>
+    </div>
+    <div class="app-buttons">
+      <button class="btn btn-detail" onclick="window.location.href='icindenevar.html'">🔍 Detay</button>
+      <button class="btn btn-store" onclick="window.open('https://apps.apple.com/tr/app/i-%C3%A7indenevar/id6753892789','_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="App Store"> Store
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Kemal Serkan YILDIRIM — <a href="mailto:kemalserkanyildirim@gmail.com">İletişim</a>
+  </footer>
+
 </body>
 </html>
